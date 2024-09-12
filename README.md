@@ -4,7 +4,7 @@ This program processes flow logs and tags each entry based on a lookup table of 
 1. The count of how many times each tag was applied.
 2. The count of unique port/protocol combinations found in the logs.
 
-This tool can handle large files (up to 10MB for flow logs) and lookup tables with as many as 10,000 mappings. It's designed to work efficiently with large datasets.
+This program can handle large files (up to 10MB for flow logs) and lookup tables with as many as 10,000 mappings. It's designed to work efficiently with large datasets.
 
 ## Assumptions
 
@@ -38,7 +38,6 @@ The program creates a single CSV file (output_counts.csv) with two sections:
 Test Files:
 
 1. Small Test: I started with a small lookup table and flow log file to make sure everything was working as expected.
-
 2. Large Test: Next, I tested the program with a larger dataset. The program handled both large files without performance issues.
 
 The program processess large flow logs by reading the logs line by line, rather than loading the entire file into memory. This ensures it can handle logs up to 10MB.
